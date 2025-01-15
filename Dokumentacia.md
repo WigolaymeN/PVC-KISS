@@ -1,4 +1,6 @@
+# LEPSIE SA CITA V CODE PREVIEW #
 DOKUMENTACIA : VPN A
+
 Cieľom projektu je vytvoriť VPN sieť, ktorá prepája dve geograficky oddelené lokality cez GRE 
 (Generic Routing Encapsulation) tunel v Cisco Packet Tracer. Tento tunel umožní prístup z 
 vzdialenej siete k tlačiarni v lokálnej sieti.
@@ -35,19 +37,22 @@ o	FastEthernet0/0: 192.168.2.1/24
 o	Serial0/3/0: 10.1.1.2
 o	DHCP pre sieť 192.168.2.0 na automatické pripojenie zariadení.
 
-3. Konfigurácia GRE tunela
+4. Konfigurácia GRE tunela
 GRE tunel sa vytvoril na oboch routeroch:
+
 •	Na R1:
 o	Rozhranie Tunnel0: 172.16.1.1
 o	Tunnel source: Serial0/3/0
 o	Tunnel destination: 10.1.1.2
+
 •	Na R2:
 o	Rozhranie Tunnel0: 172.16.1.2
 o	Tunnel source: Serial0/3/0
 o	Tunnel destination: 10.1.1.1
+
 Tento tunel umožní prenos dát medzi lokálnou a vzdialenou sieťou cez špeciálny kanál.
 
-4. Konfigurácia switchov
+6. Konfigurácia switchov
 Na switchoch v oboch sieťach som nastavil porty na režim "access", aby zariadenia pripojené k switchom mohli komunikovať so sieťou.
 
 Problémy a riešenia
